@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartEdu Login</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-container">
+    <!-- LOGIN FORM -->
+        <div id="loginForm" class="login-card-new">
+            <div class="login-logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h2>Welcome Back</h2>
+            <p class="login-sub">Login to continue your learning journey</p>
+            <label>Email</label>
+            <div class="input-box">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="your@email.com">
+            </div>
+            <label>Password</label>
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="password">
+            </div>
+            <button class="login-btn-new" type="button">Login</button>
+            <p class="register-text">
+                Don't have an account?
+                <span onclick="location.href='login.html?mode=register'">Register</span>
+            </p>
+        </div>
+        <div id="registerForm" class="login-card-new">
+            <div class="login-logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h2>Create Account</h2>
+            <p class="login-sub">Start your learning journey today</p>
+            <label>Full Name</label>
+            <div class="input-box">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" placeholder="Your name">
+            </div>
+            <label>Email</label>
+            <div class="input-box">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="your@email.com">
+            </div>
+            <label>Password</label>
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="password">
+            </div>
+            <label>Select Role</label>
+            <div class="input-box">
+                <i class="fa-solid fa-user-graduate"></i>
+                <select id="userRole">
+                    <option value="Student">Student</option>
+                    <option value="Parent">Parent</option>
+                    <option value="Tutor">Tutor</option>
+                </select>
+            </div>
+            <button class="login-btn-new" type="button">Create Account</button>
+            <p class="register-text">
+                Already have an account?
+                <span onclick="location.href='login.html?mode=login'">Login</span>
+            </p>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

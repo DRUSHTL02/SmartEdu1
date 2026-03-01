@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartEdu Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="dash-navbar">
+    <div id="successToast" class="success-toast">
+        <i class="fa-solid fa-circle-check"></i>
+        Enrollment successful!
+    </div>
+    <div class="dash-left">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>SmartEdu</span>
+    </div>
+
+    <div class="dash-right">
+        <span id="userWelcome">Hello, User</span>
+        <span id="roleBadge" class="role-badge"></span>
+        <i class="fa-solid fa-right-from-bracket logout" id="logoutBtn"></i>
+    </div>
+</nav>
+
+<!-- DASHBOARD -->
+<div class="dashboard-container">
+
+    <h1>Your Dashboard</h1>
+    <p class="sub">Manage your courses and track your progress</p>
+
+    <div class="dash-cards">
+        <div class="dash-card" id="studentCard">
+            <i class="fa-solid fa-book-open"></i>
+            <h1 id="activeCount">0</h1>
+            <p>Active Enrollments</p>
+        </div>
+
+        <div class="dash-card" id="tutorCard" onclick="window.location.href='tests.html'">
+            <i class="fa-solid fa-trophy"></i>
+            <h1>View Tests</h1>
+            <p>Practice & Assessments</p>
+        </div>
+
+        <div class="dash-card ai" id="aiCard">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>AI Tutor</h1>
+            <p>Ask your doubts</p>
+        </div>
+
+    </div>
+
+    <!-- ENROLL SECTION -->
+    <div class="enroll-head">
+        <h2>My Enrollments</h2>
+
+        <button class="enroll-btn">
+            <i class="fa-solid fa-plus"></i>
+            Enroll New Course
+        </button>
+    </div>
+    <div id="enrollmentContainer" class="enrollment-grid">
+
+        <!-- EMPTY STATE -->
+        <div class="empty-card" id="emptyState">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>No enrollments yet</h3>
+            <p>Start your learning journey by enrolling in your first course</p>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+
+    </div>
+
+</div>
+<!-- AI Tutor Modal -->
+<div id="aiModal" class="ai-modal">
+  <div class="ai-box">
+
+    <div class="ai-header">
+      <div class="ai-title">
+        <div class="ai-icon">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <div>
+          <h3>AI Tutor Assistant</h3>
+          <p>Ask me anything!</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-xmark close-ai" id="closeAi"></i>
+    </div>
+
+    <div class="ai-body" id="chatArea">
+      <div class="ai-empty">
+        <i class="fa-solid fa-star"></i>
+        <p>Start a conversation with your AI tutor!</p>
+      </div>
+    </div>
+
+    <div class="ai-footer">
+      <input type="text" id="aiInput" placeholder="Ask your question..." />
+      <button id="aiSend">Send</button>
+    </div>
+
+  </div>
+</div>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

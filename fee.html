@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Summary - SmartEdu</title>
+    <link rel="stylesheet" href="enroll.css">
+    <link rel="stylesheet" href="fee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="enroll-navbar">
+        <div class="nav-left">
+            <i class="fa-solid fa-arrow-left back-arrow"></i>
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>SmartEdu</span>
+        </div>
+    </nav>
+    <div class="enroll-container">
+        <h1>Enroll in a Course</h1>
+        <p class="sub">Select your class, board, and subjects</p>
+        <div class="step-bar">
+            <div class="step active">1</div>
+            <div class="line active"></div>
+            <div class="step active">2</div>
+            <div class="line active"></div>
+            <div class="step active">3</div>
+            <div class="line active"></div>
+            <div class="step active">4</div>
+        </div>
+        <h2>Choose Class Type & Confirm</h2>
+        <div class="type-grid">
+            <div class="type-card" data-type="Group">
+                <i class="fa-solid fa-users"></i>
+                <h3>Group Classes</h3>
+                <p>Learn with peers in a collaborative environment</p>
+            </div>
+            <div class="type-card" data-type="Individual">
+                <i class="fa-regular fa-user"></i>
+                <h3>Individual Classes</h3>
+                <p>Personalized one-on-one attention</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <h3 class="summary-title">
+                <i class="fa-solid fa-calculator"></i> Enrollment Summary
+            </h3>
+            <div class="summary-row">
+                <span>Class:</span>
+                <span id="summaryClass"></span>
+            </div>
+            <div class="summary-row">
+                <span>Board:</span>
+                <span id="summaryBoard"></span>
+            </div>
+            <div class="summary-row">
+                <span>Subjects:</span>
+                <span id="summarySubjects"></span>
+            </div>
+            <div class="summary-row">
+                <span>Class Type:</span>
+                <span id="summaryType"></span>
+            </div>
+            <hr>
+            <div class="fee-row">
+                <span>Total Fee:</span>
+                <span id="totalFee">₹0</span>
+            </div>
+            <div class="btn-row">
+                <button class="back-btn">Back</button>
+                <button id="confirmBtn" class="confirm-btn">
+                    Confirm Enrollment
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="fee.js"></script>
+</body>
+</html>
